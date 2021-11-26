@@ -1,0 +1,30 @@
+.list{
+  border: 0px solid black;
+  padding: 20rpx 20rpx 0rpx 20rpx;
+  margin: auto 40rpx;
+  margin-top: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0  20rpx grey;
+  display: flex;
+  flex-direction: column;
+}
+.show{
+  text-align: center;
+}
+.showView{
+  display: flex;
+  flex-direction: column;
+}
+.divLine{
+  background: #E0E3DA;
+  width: 100%;
+  height: 3rpx;
+  align-self: center;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+ }
+text{
+  font-size:.875rem;
+}
+
+

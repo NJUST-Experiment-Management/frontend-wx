@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/login/login",
+    "pages/course/course", 
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#BD6DF4",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+   "tabBar": {
+    "selectedColor":"#bd6df4",
+    "color": "#cdcdcd",
+      "list": [
+        {
+          "pagePath": "pages/course/course",
+          "text": "我的课程",
+          "iconPath": "./assets/course.png",
+          "selectedIconPath": "./assets/courseselect.png"
+        },
+        {
+          "pagePath": "pages/index/index",
+          "text": "个人信息",
+          "iconPath": "./assets/person.png",
+          "selectedIconPath": "./assets/personselect.png"
+        }
+      ]
+    }
+}
