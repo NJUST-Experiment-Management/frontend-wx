@@ -1,0 +1,28 @@
+<!--页面根标签-->
+<view class="content">
+	<!-- <image class='background' src="../../assets/background.jpg" mode="aspectFill"></image> -->
+</view>
+
+<view class="container"> 
+ 
+ <view class="login-from"> 
+
+ <!--账号-->
+ <view class="inputView"> 
+  <image mode="aspectFill" class="nameImage" src="/assets/account.png" ></image>
+  <input class="inputText" placeholder="请输入学号" bindinput="usernameInput" /> 
+ </view> 
+ <view class="line"></view> 
+ 
+ <!--密码-->
+ <view class="inputView"> 
+  <image mode="aspectFill" class="keyImage" src="/assets/password.png"></image>
+  <input class="inputText" password="true" placeholder="请输入密码" bindinput="passwordInput" /> 
+ </view> 
+ 
+ <!--按钮-->
+ <view class="loginBtnView"> 
+  <button class="loginBtn"  size="mini" type="primary" bindtap="login">登录</button> 
+ </view> 
+ </view> 
+</view>
