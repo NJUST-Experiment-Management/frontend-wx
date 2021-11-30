@@ -1,1 +1,50 @@
-/**/
+/**index.wxss**/
+.userinfo-avatar {
+    position: relative;
+    overflow: hidden;
+    width: 160rpx;
+    height: 160rpx;
+    margin: 20rpx;
+    left: 40px;
+    top: 20rpx;
+    border-radius: 50%;
+}
+.nickname{
+    left: 25px; 
+    top: 10px;
+    position: relative; 
+    font-family: 'Courier New', Courier, monospace;
+}
+.name {
+    position: absolute;
+    top: 60px;
+    right: 40px;
+    font-size: large;
+
+}
+
+
+
+.group {
+    margin-top: 20px;
+}
+.head{
+
+    padding-bottom: 20px;
+}
+.box{
+    width:100%;
+    height:2px;
+    background: -webkit-linear-gradient(left, #fff -4%,#963ee7 50%,#fff 100%);
+
+}
+.contactbtn{
+    background-color: #FFF; 
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+}
+.contactbtn::after{
+    border: none; 
+
+}

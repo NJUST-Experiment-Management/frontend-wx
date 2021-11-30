@@ -1,7 +1,7 @@
 //index.js
 //获取应用实例
 const app = getApp()
- 
+
 Page({
   data: {
     username: '',
@@ -9,24 +9,24 @@ Page({
   },
 
   onLoad: function () {
-   
+
   },
- 
- 
+
+
   // 获取输入账号 
   usernameInput: function (e) {
     this.setData({
       username: e.detail.value
     })
   },
- 
+
   // 获取输入密码 
   passwordInput: function (e) {
     this.setData({
       password: e.detail.value
     })
   },
- 
+
   // 登录处理
   login: function () {
     var that = this;
@@ -41,29 +41,30 @@ Page({
       // wx.switchTab({
       //   url: '/pages/course/course',
       // })
+      
       wx.request({
+        
         //url: app.globalData.globalReqUrl +'/login/login', 
-        url: 'http://rap2api.taobao.org/app/mock/294647/login',
+        url: 'http://rap2api.taobao.org/app/mock/294824/login',
         method: 'post',
         data: {
           username: that.data.username,
           password: that.data.password
         },
         header: {
-          'content-type': 'application/x-www-form-urlencoded' // 默认值
+          'content-type': 'application/json;charset=utf-8'
         },
         success(res) {
-          if (res.data.code == "OK") {
-            var unitName = res.data.data.User.unitName;
-            var unitId = res.data.data.User.unitId;
-            wx.setStorageSync('unitId', unitId);
-            wx.setStorageSync('unitName', unitName);
+          console.log(res)
+          if (res.statusCode==200) {
+            wx.setStorageSync('user', res.data);
             wx.switchTab({
               url: '/pages/course/course'
             })
+
           } else {
             wx.showToast({
-              title: res.data.message,
+              title: res.message,
               icon: 'none',
               duration: 2000
             })
@@ -73,4 +74,3 @@ Page({
     }
   }
 })
- 

@@ -1,0 +1,16 @@
+/* pages/message/message.wxss */
+.notread{
+    border-bottom: 1px solid rgb(214, 139, 233);
+    padding: 15px;
+}
+.read{
+    border-bottom: 1px solid rgb(214, 139, 233);
+    padding: 15px;
+}
+.time{
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.content{
+    margin-left: 15px;
+}

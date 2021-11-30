@@ -5,11 +5,18 @@ Page({
   data: {
     isshow:[],
     list:[
-    ]
+    ],
+    show:0
   },
+  onShow(){
+    this.getTabBar().init();
+   },
  onLoad(){
   this.setData({
+    user:wx.getStorageSync('user'),
     list:[
+      {"course_name":'计算机组成原理原理原理原料库原理','room_name':'1002','device_row':2,'device_col':4,'isopening':0,'arrange_date':'2021-11-25','arrange_time':'4'},
+      {"course_name":'计算机组成原理','room_name':'1032','device_row':1,'device_col':4,'isopening':1,'arrange_date':'2021-11-15','arrange_time':'3'},
       {"course_name":'计算机组成原理原理原理原料库原理','room_name':'1002','device_row':2,'device_col':4,'isopening':0,'arrange_date':'2021-11-25','arrange_time':'4'},
       {"course_name":'计算机组成原理','room_name':'1032','device_row':1,'device_col':4,'isopening':1,'arrange_date':'2021-11-15','arrange_time':'3'}
     ]
@@ -32,5 +39,5 @@ Page({
     this.setData({ 
       [number] : !this.data.isshow[e.currentTarget.dataset.index]
     })
-  },
+  }
 })

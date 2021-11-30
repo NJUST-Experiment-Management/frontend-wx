@@ -1,0 +1,17 @@
+<view>
+    <view wx:for="{{infoList}}" wx:if="{{item.isread=='0'}}" class="notread van-ellipsis" bindtap="checkmsg" data-item="{{item}}" data-index="{{index}}">
+        <van-icon name="smile-comment-o" dot />
+        <text class="time">{{item.time}}</text>
+        <text class="content">{{item.content}} </text>
+    </view>
+</view>
+
+<view>
+    <view wx:for="{{infoList}}" wx:if="{{item.isread=='1'}}" class="read van-ellipsis" bindtap="checkmsg" data-item="{{item}}" data-index="{{index}}">
+        <van-icon name="smile-comment-o" />
+        <text class="time">{{item.time}}</text>
+        <text class="content">{{item.content}} </text>
+    </view>
+</view>
+
+<van-dialog id="van-dialog" />

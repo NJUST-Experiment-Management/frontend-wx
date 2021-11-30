@@ -1,32 +1,44 @@
 {
+  "usingComponents": {
+    "van-button": "@vant/weapp/button/index",
+    "van-icon": "@vant/weapp/icon/index",
+    "van-transition": "@vant/weapp/transition/index",
+    "van-notify": "@vant/weapp/notify/index",
+    "van-toast": "@vant/weapp/toast/index",
+    "van-tabbar": "@vant/weapp/tabbar/index",
+  "van-tabbar-item": "@vant/weapp/tabbar-item/index",
+  "van-tab": "@vant/weapp/tab/index",
+  "van-tabs": "@vant/weapp/tabs/index",
+  "van-cell": "@vant/weapp/cell/index",
+  "van-cell-group": "@vant/weapp/cell-group/index",
+  "van-dialog": "@vant/weapp/dialog/index"
+    
+  },
   "pages":[
     "pages/login/login",
     "pages/course/course", 
-    "pages/index/index"
+    "pages/index/index",
+    "pages/message/message"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#BD6DF4",
+    "navigationBarBackgroundColor": "#A06CD5",
     "navigationBarTitleText": "Weixin",
     "navigationBarTextStyle":"white"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
    "tabBar": {
-    "selectedColor":"#bd6df4",
-    "color": "#cdcdcd",
+    "custom": true,
+    "selectedColor":"#000000",
+    "color": "#000000",
+    "backgroundColor": "#000000",
       "list": [
         {
-          "pagePath": "pages/course/course",
-          "text": "我的课程",
-          "iconPath": "./assets/course.png",
-          "selectedIconPath": "./assets/courseselect.png"
+          "pagePath": "pages/course/course"
+
         },
         {
-          "pagePath": "pages/index/index",
-          "text": "个人信息",
-          "iconPath": "./assets/person.png",
-          "selectedIconPath": "./assets/personselect.png"
+          "pagePath": "pages/index/index"
         }
       ]
     }
