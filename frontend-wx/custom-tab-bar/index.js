@@ -33,24 +33,25 @@ Component({
 				active: that.data.list.findIndex(item => item.url === `/${page.route}`),
 			});
 			wx.request({
-				url: 'http://rap2api.taobao.org/app/mock/294824/getMessageNum',
+				url: 'http://localhost:9090/getMessageNum',
 				method: 'get',
 				header: {
 					'content-type': 'application/json;charset=utf-8', // 默认值
 					'token': user.token
 				},
 				success(res) {
-					if (res.statusCode == 200) {
-						wx.setStorageSync('num', res.data.num);
-						if (res.data.num != 0) {
+					console.log(res)
+					if (res.data.code == "0") {
+						wx.setStorageSync('num', res.data.data);
+						if (res.data.data != 0) {
 							that.setData({
-								[number]: res.data.num
+								[number]: res.data.data
 							});
 						}
 
 					} else {
 						wx.showToast({
-							title: res.data.message,
+							title: res.data.msg,
 							icon: 'none',
 							duration: 2000
 						})

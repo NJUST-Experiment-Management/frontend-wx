@@ -1,39 +1,26 @@
+
+<wxs src="../../wxs/getDay.wxs" module="tools" />
 <view class="courselist">
   <view class="list" bindtap="show" data-index="{{index}}" wx:for="{{list}}" wx:for-index="index">
     <view>
       <view>
-        <text>课程/考试名称:{{item.course_name}}</text>
-      </view>
-
-    </view>
-    <view class="showView" wx:if="{{isshow[index]}}">
-      <view class="divLine"></view>
-      <view>
-        <text>地点:{{item.room_name}}</text>
-      </view>
-      <view class="divLine"></view>
-      <view>
-        <text>座位号:{{item.device_row*11+item.device_col}}</text>
-      </view>
-      <view class="divLine"></view>
-      <view>
-        <text>课程性质:<text wx:if="{{item.isopening==1}}">开放性实验</text><text wx:if="{{item.isopening==0}}">课程</text>
-        </text>
-      </view>
-      <view class="divLine"></view>
-      <view>
-        <text>上课时间:{{item.arrange_date}} 第 {{item.arrange_time}} 大节</text>
-      </view>
-      <view class="divLine"></view>
-    </view>
-    <view class="show">
-      <view wx:if="{{!isshow[index]}}">
-        <van-icon name="arrow-down" />
-      </view>
-      <view wx:if="{{isshow[index]}}">
-        <van-icon name="arrow-up" />
+        <text>名称:{{item.course_name}}</text>
       </view>
     </view>
-
+    <view class="divLine"></view>
+    <view>
+      <text>地点:{{item.room_name}} 座位号:{{item.device_row*11+item.device_col}}</text>
+    </view>
+    <view class="divLine"></view>
+    <view>
+      <text>课程性质:<text wx:if="{{item.isopening==1}}">开放性实验</text><text wx:if="{{item.isopening==0}}">课程/竞赛/考试</text>
+      </text>
+    </view>
+    <view class="divLine"></view>
+    <view>
+      <text>上课时间:{{item.arrange_date}} 第 {{item.arrange_time}} 大节</text>
+    </view>
+    <view class="divLine"></view>
+    <view class="day"><text >{{tools.getDay(item.arrange_date)}}</text></view>
   </view>
 </view>

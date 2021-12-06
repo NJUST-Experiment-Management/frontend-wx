@@ -1,5 +1,4 @@
 .list{
-  border: 0px solid black;
   padding: 20rpx 20rpx 0rpx 20rpx;
   margin: auto 40rpx;
   margin-top: 20rpx;
@@ -7,6 +6,8 @@
   box-shadow: 0 0  20rpx grey;
   display: flex;
   flex-direction: column;
+  background-color: rgb(252, 229, 207);
+  position: relative;
 }
 .show{
   text-align: center;
@@ -27,10 +28,23 @@ text{
   font-size:.875rem;
 }
 
-
+.day{
+  background-color: rgb(96, 108, 221);
+  color: wheat;
+  box-shadow: 0 0  20rpx grey;
+  position: absolute;
+  right: 10%;
+  top:30%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 70px;
+}
 
 
 .courselist{
   margin-top: 20px;
   padding-bottom: 100px ;
 }
+

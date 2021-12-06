@@ -5,7 +5,7 @@
   </view>
   <view class="nickname"><open-data type="userNickName"></open-data></view>
   
-  <view class="name"><text>{{user.username}} {{user.userid}}</text></view>
+  <view class="name"><text>{{user.userName}} {{user.userId}}</text></view>
 </view>
 <view class="box"></view>
 <view class="group">

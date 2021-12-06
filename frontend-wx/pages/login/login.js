@@ -45,10 +45,10 @@ Page({
       wx.request({
         
         //url: app.globalData.globalReqUrl +'/login/login', 
-        url: 'http://rap2api.taobao.org/app/mock/294824/login',
+        url: 'http://localhost:9090/login',
         method: 'post',
         data: {
-          username: that.data.username,
+          userId: that.data.username,
           password: that.data.password
         },
         header: {
@@ -56,15 +56,14 @@ Page({
         },
         success(res) {
           console.log(res)
-          if (res.statusCode==200) {
-            wx.setStorageSync('user', res.data);
+          if (res.data.code=="0") {
+            wx.setStorageSync('user', res.data.data);
             wx.switchTab({
               url: '/pages/course/course'
             })
-
           } else {
             wx.showToast({
-              title: res.message,
+              title: res.data.msg,
               icon: 'none',
               duration: 2000
             })
