@@ -1,0 +1,27 @@
+
+<wxs src="../../wxs/getDay.wxs" module="getDay" />
+<wxs src="../../wxs/subDate.wxs" module="subDate" />
+<view class="courselist">
+  <view class="list" bindtap="show" data-index="{{index}}" wx:for="{{infoList}}" wx:for-index="index">
+    <view>
+      <view>
+        <text>名称:{{item.courseName}}</text>
+      </view>
+    </view>
+    <view class="divLine"></view>
+    <view>
+      <text>地点:{{item.roomName}} </text><view class="divLine"></view>
+      <text>机位号: {{item.deviceRow}} 行{{item.deviceCol}} 列</text>
+    </view>
+    <view class="divLine"></view>
+    <!-- <view>
+      <text>课程性质:<text wx:if="{{item.isopening==1}}">开放性实验</text><text wx:if="{{item.isopening==0}}">课程/竞赛/考试</text>
+      </text>
+    </view> -->
+    <!-- <view class="divLine"></view> -->
+    <view>
+      <text>上课时间:{{subDate.subDate(item.arrangeDate)}} 第 {{item.arrangeTime}} 大节</text>
+    </view>
+    <view class="day"><p style="font-size: 40rpx;font-family:Segoe UI;font-weight: 1000;">{{getDay.getDay(subDate.subDate(item.arrangeDate))}}</p></view>
+  </view>
+</view>

@@ -1,0 +1,13 @@
+
+var subDate = function(val) {
+  var daterc = val
+  if (daterc != null) {
+    var date =  getDate(daterc);
+    var year = date.getFullYear();
+    var month = date.getMonth() + 1 < 10 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1;
+    var day = date.getDate() < 10 ? "0" + date.getDate() : date.getDate();
+    return year + "-" + month + "-" + day
+  }
+}
+
+  module.exports.subDate = subDate;

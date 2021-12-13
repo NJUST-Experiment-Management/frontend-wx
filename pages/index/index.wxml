@@ -1,0 +1,61 @@
+<view class="container">
+<view class="head">
+  <view class="userinfo-avatar">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="nickname"><open-data type="userNickName"></open-data></view>
+  
+  <view class="name"><text>{{user.userName}} {{user.userId}}</text></view>
+</view>
+<view class="box"></view>
+<view class="group">
+  <van-cell-group inset >
+    <van-cell size="large"  link-type="navigateTo" url="/pages/message/message">
+      <view slot="title" style="float: left;" >
+        <van-icon name="chat" />
+      </view>
+      <view slot="title" style="float: left; margin-left: 10px;">
+        <text>我的消息</text>
+      </view>
+      <view slot="title" style="text-align: right;" wx:if="{{num>0}}">
+        <van-icon name="arrow" info="{{num}}" />
+      </view>
+      <view slot="title" style="text-align: right;" wx:if="{{num==0}}">
+        <van-icon name="arrow"  />
+      </view>
+    </van-cell>
+    <van-cell size="large"  link-type="navigateTo" url="/pages/login/login">
+      <view slot="title" style="float: left;">
+        <van-icon name="exchange" />
+      </view>
+      <view slot="title" style="float: left; margin-left: 10px;">
+        <text>绑定解绑</text>
+      </view>
+      <view slot="title" style="text-align: right;">
+        <van-icon name="arrow" />
+      </view>
+    </van-cell>
+   
+    <button class="contactbtn" open-type="contact">
+    <van-cell size="large" >
+      <view slot="title" style="float: left;" >
+        <van-icon name="friends-o" />
+      </view>
+      <view slot="title" style="float: left; margin-left: 10px;">
+        <text>联系客服</text>
+      </view>
+      <view slot="title" style="text-align: right;" wx:if="{{num>0}}">
+        <van-icon name="arrow" />
+      </view>
+      <view slot="title" style="text-align: right;" wx:if="{{num==0}}">
+        <van-icon name="arrow"  />
+      </view>
+    </van-cell>
+  </button>
+  </van-cell-group>
+</view>
+  
+
+
+
+</view>

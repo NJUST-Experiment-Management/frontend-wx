@@ -1,0 +1,18 @@
+<wxs src="../../wxs/subDate.wxs" module="subDate" />
+<view>
+    <view wx:for="{{infoList}}" wx:if="{{item.read==false}}" class="notread van-ellipsis" bindtap="checkmsg" data-item="{{item}}" data-index="{{index}}">
+        <van-icon name="smile-comment-o" dot />
+        <text class="time">{{subDate.subDate(item.sendTime)}}</text>
+        <text class="content">{{item.content}} </text>
+    </view>
+</view>
+
+<view>
+    <view wx:for="{{infoList}}" wx:if="{{item.read==true}}" class="read van-ellipsis" bindtap="checkmsg" data-item="{{item}}" data-index="{{index}}">
+        <van-icon name="smile-comment-o" />
+        <text class="time">{{subDate.subDate(item.sendTime)}}</text>
+        <text class="content">{{item.content}} </text>
+    </view>
+</view>
+
+<van-dialog id="van-dialog" />

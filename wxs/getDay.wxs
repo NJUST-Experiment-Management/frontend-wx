@@ -1,0 +1,7 @@
+var getDay = function (date) {
+    // var week = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六',]
+    var week = ['SUN','MON','TUE','WED','THU','FRI','SAT',]
+    var d =  getDate(date).getDay();//注意此处必须是先new一个Date
+    return week[d];
+  }
+  module.exports.getDay = getDay;
