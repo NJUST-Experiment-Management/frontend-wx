@@ -17,12 +17,17 @@
 }
 .name {
     position: absolute;
-    top: 60px;
-    right: 40px;
+    top: 50px;
+    left: 200px;
     font-size: large;
 
 }
-
+.name1{
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    font-size: large;
+}
 
 
 .group {

@@ -5,7 +5,8 @@
   </view>
   <view class="nickname"><open-data type="userNickName"></open-data></view>
   
-  <view class="name"><text>{{user.userName}} {{user.userId}}</text></view>
+  <view class="name"><text>姓名：{{user.userName}} </text></view>
+  <view class="name1"><text>学号：{{user.userId}}</text></view>
 </view>
 <view class="box"></view>
 <view class="group">
@@ -24,7 +25,7 @@
         <van-icon name="arrow"  />
       </view>
     </van-cell>
-    <van-cell size="large"  link-type="navigateTo" url="/pages/login/login">
+    <van-cell size="large"  link-type="redirectTo" url="/pages/login/login">
       <view slot="title" style="float: left;">
         <van-icon name="exchange" />
       </view>

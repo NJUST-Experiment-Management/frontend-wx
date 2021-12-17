@@ -10,6 +10,13 @@ Page({
   onShow() {
     this.getTabBar().init();
   },
+  onPullDownRefresh(){
+    this.onLoad()
+    setTimeout(() => {
+      wx.stopPullDownRefresh()
+    }, 1000);
+    
+  },
   onLoad() {
     var that = this
     wx.request({

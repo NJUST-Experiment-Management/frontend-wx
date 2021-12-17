@@ -46,6 +46,13 @@ Page({
         });
 
     },
+    onPullDownRefresh(){
+        this.onShow()
+        setTimeout(() => {
+          wx.stopPullDownRefresh()
+        }, 1000);
+        
+      },
     onLoad: function (options) {
         var user = wx.getStorageSync('user');
         this.setData({
